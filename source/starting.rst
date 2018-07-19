@@ -1,0 +1,82 @@
+Prerequisites and Getting Started
+=================================
+
+This guide assumes you are setting up a development environment for use in the
+Digital Humanities Innovation Lab on a Mac. There are many comparable systems
+for using Windows or Linux, but we don't have any users on those systems to
+test out the documentation. If you'd like to use those systems and write
+documentation on your experiences, please do.
+
+Contributions via our `Github`_ are always welcome.
+
+Conventions
+-----------
+
+.. sidebar:: More information
+
+  Some pages will contain additional information in a sidebar like this.
+
+File paths are typeset in a ``monotype`` font in running text to distinguish
+them from the surrounding content.
+
+Terminal commands may be referred to inline like ``cat /path/to/file`` for a
+simple description. Longer commands or commands with output are typeset as in
+the next example.
+
+.. code-block:: shell
+  :linenos:
+
+  $ ruby --version
+  ruby 2.0.0p648 (2015-12-16 revision 53162) [universal.x86_64-darwin15]
+
+Line 1 above has the command that should be typed, prefixed by a dollar sign.
+Don't type the dollar sign as part of the command.
+
+Line 2 has the output from the command. It isn't prefixed with a dollar sign to
+indicate that it is output.
+
+.. note::
+
+  Warnings, notes, and other important information will be included in notes
+  like this one.
+
+.. todo::
+
+  Some parts of the documentation are not as complete or edited as they should
+  be. Those parts have been noted in these *todo* blocks.
+
+Command line
+------------
+
+Many of the tools used in this guide are installed, configured, and run from
+the command line. You should have a basic familiarity with the running commands
+from the terminal.
+
+There are plenty of resources on the Internet to help a person learn to use
+the command line and the terminal.
+
+* http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line
+* https://code.tutsplus.com/tutorials/command-line-basics-and-useful-tricks-with-the-terminal--cms-29356
+
+.. note::
+  OS X includes a usable terminal/command line program at
+  ``/Applications/Utilities/Terminal.app``. It's good enough for most purposes. If
+  you'd like to use something more sophisticated, iTerm2_ is a very powerful
+  replacement.
+
+Tools
+-----
+
+All the tools described by this guide have a common dependency. They will not
+work without Apple's XCode tools installed. You don't need the full, complete
+XCode suite, just the command line tools. Like everything else, there's a
+command to do that.
+
+.. code-block:: shell
+
+  $ xcode-select --install
+
+XCode is a big piece of software. Expect it to take a long time to download.
+
+.. _iTerm2: https://www.iterm2.com/
+.. _Github: https://github.com/sfu-dhil
