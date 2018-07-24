@@ -10,7 +10,7 @@ Installation
 The DHIL production server runs PHP 5.6, so we will install that. installing
 other versions of PHP is possible and quite easy. See below for more information.
 
-.. code-block:: shell
+.. code-block:: console
   :linenos:
 
   $ brew install php@5.6
@@ -82,7 +82,7 @@ PHP includes a few command line tools. These sample commands should all work and
 print useful things. If you try these commands and get an error message, something
 has gone wrong in the installation.
 
-.. code-block:: shell
+.. code-block:: console
 
   $ php --version
   PHP 5.6.36 (cli) (built: Jun 22 2018 00:08:38)
@@ -104,7 +104,7 @@ Other PHP Versions
 As mentioned above, it's possible and even easy to install and manage multiple
 versions of PHP via Homebrew.
 
-.. code-block:: shell
+.. code-block:: console
   :linenos:
 
   $ brew unlink php@5.6
@@ -116,7 +116,7 @@ makes the new version active again. Each new version of PHP will require you
 to install the ``pecl`` extensions. You should not need to reinstall
 imagemagick or composer.
 
-.. code-block:: shell
+.. code-block:: console
 
   $ pecl install imagick
 
@@ -127,7 +127,7 @@ installed (``7.2`` in these examples).
 To switch from one version of PHP to another you must unlink the current version
 and then link the new one. For example
 
-.. code-block:: shell
+.. code-block:: console
 
   $ brew unlink php@7.2
   $ brew link php@5.6

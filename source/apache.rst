@@ -9,7 +9,7 @@ Installation
 
 Install the basic Apache web server.
 
-.. code-block:: shell
+.. code-block:: console
   :linenos:
 
   $ brew install httpd
@@ -123,7 +123,7 @@ public.
 Finally, create the Sites folder if it doesn't already exist and add some
 content to it.
 
-.. code-block:: shell
+.. code-block:: console
 
   $ mkdir -p ~/Sites
   $ echo "<h1>Howdy do!</h1>" > ~/Sites/index.html
@@ -135,7 +135,7 @@ content to it.
 
 Once these changes are complete, you must restart Apache for them to take effect.
 
-.. code-block:: shell
+.. code-block:: console
 
   sudo apachectl restart
 
@@ -168,7 +168,7 @@ files that have a ``.php`` suffix.
 
 Finally, test that Apache and PHP work together.
 
-.. code-block:: shell
+.. code-block:: console
   :linenos:
 
   $ sudo apachectl restart
@@ -182,7 +182,7 @@ Troubleshooting
 
 Check if Apache is running at all.
 
-.. code-block:: shell
+.. code-block:: console
 
   $ ps ax  | grep httpd
   34512   ??  Ss     0:00.08 /usr/local/opt/httpd/bin/httpd -D FOREGROUND
@@ -191,13 +191,13 @@ Check if Apache is running at all.
 Read the apache error log. The most recent error output is at the end of the
 log.
 
-.. code-block:: shell
+.. code-block:: console
 
   $ open -a Console.app /usr/local/var/log/httpd/error_log
 
 Check the Apache configuration.
 
-.. code-block:: shell
+.. code-block:: console
 
   $ sudo apachectl -S
   VirtualHost configuration:
@@ -206,7 +206,7 @@ Check the Apache configuration.
 
 Start, stop, or restart the web server.
 
-.. code-block:: shell
+.. code-block:: console
 
   $ sudo apachectl start
   $ sudo apachectl stop

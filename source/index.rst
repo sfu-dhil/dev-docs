@@ -8,6 +8,7 @@ This guide should help setting up a new development environment.
    :maxdepth: 2
 
    starting
+   cmdline
    brew
    sphinx
    mysql

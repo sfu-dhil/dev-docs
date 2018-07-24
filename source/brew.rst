@@ -26,7 +26,7 @@ Installation
 The install command is printed on the Homebrew_ home page, and can be
 copy/pasted directly into the terminal. It looks like
 
-.. code-block:: shell
+.. code-block:: console
 
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 

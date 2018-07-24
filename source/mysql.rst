@@ -9,7 +9,7 @@ If that version doesn't work, feel free to try another version.
 Installation
 ------------
 
-.. code-block:: shell
+.. code-block:: console
   :linenos:
 
   $ brew install mysql@5.7
@@ -33,11 +33,11 @@ at login.
 
 Now it's time to test the installation.
 
-.. code-block:: shell
+.. code-block:: console
 
   $ mysql -u root
 
-This should start a MySQL shell in the terminal that looks something like this::
+This should start a MySQL console in the terminal that looks something like this::
 
   Welcome to the MySQL monitor.  Commands end with ; or \g.
   Your MySQL connection id is 4
@@ -53,7 +53,7 @@ This should start a MySQL shell in the terminal that looks something like this::
   mysql>
 
 The ``mysql>`` line is the command prompt. MySQL is waiting for a command at that
-prompt. Type ``ctrl-d`` [#f1]_ to exit the MySQL shell and return to your normal shell.
+prompt. Type ``ctrl-d`` [#f1]_ to exit the MySQL console and return to your normal console.
 
 Make it secure
 --------------
@@ -61,7 +61,7 @@ Make it secure
 MySQL is installed without a password and with only a root user. It must be made
 secure.
 
-.. code-block:: shell
+.. code-block:: console
 
   $ mysql_secure_installation
 
@@ -101,7 +101,7 @@ contents with descriptions
 Line 1 starts the ``mysql`` section. The options in this section will apply to
 that command only.
 
-Line 2 adds the current database name to the command prompt in the MySQL shell.
+Line 2 adds the current database name to the command prompt in the MySQL console.
 
 Lines 3 and 4 set the connection parameters so you can connect without passing
 the username and password at the command line.

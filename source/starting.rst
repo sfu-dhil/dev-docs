@@ -23,7 +23,7 @@ Terminal commands may be referred to inline like ``cat /path/to/file`` for a
 simple description. Longer commands or commands with output are typeset as in
 the next example.
 
-.. code-block:: shell
+.. code-block:: console
   :linenos:
 
   $ ruby --version
@@ -72,7 +72,7 @@ work without Apple's XCode tools installed. You don't need the full, complete
 XCode suite, just the command line tools. Like everything else, there's a
 command to do that.
 
-.. code-block:: shell
+.. code-block:: console
 
   $ xcode-select --install
 
