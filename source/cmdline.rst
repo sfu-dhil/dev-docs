@@ -1,5 +1,5 @@
-Introduction to the Command Line
-================================
+The Command Line
+================
 
 Each operating system has a different set of commands and different ways to
 access the command line. The instructions below should work for `bash

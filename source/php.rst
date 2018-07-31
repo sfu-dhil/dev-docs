@@ -1,5 +1,5 @@
-Installing and Using PHP
-========================
+PHP
+===
 
 Mac OS X includes a version of PHP which is often out of date. Luckily Homebrew
 makes installing another PHP very easy.

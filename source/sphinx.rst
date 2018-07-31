@@ -1,5 +1,5 @@
-Installing and Running Sphinx
-=============================
+Sphinx
+======
 
 `Sphinx`_ is our documentation system.
 

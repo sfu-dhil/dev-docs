@@ -5,7 +5,7 @@ Welcome to DHIL's Developer Documentation
 This guide should help setting up a new development environment.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    starting
    cmdline

@@ -1,5 +1,5 @@
-Installing and Using Homebrew
-=============================
+Homebrew
+========
 
 Homebrew_ is a package manager for OS X. The Homebrew project collects and
 distributes open-source packages aimed at developers. All interaction with

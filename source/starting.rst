@@ -1,5 +1,5 @@
-Prerequisites and Getting Started
-=================================
+Getting Started
+===============
 
 This guide assumes you are setting up a development environment for use in the
 Digital Humanities Innovation Lab on a Mac. There are many comparable systems
@@ -59,6 +59,7 @@ the command line and the terminal.
 * https://code.tutsplus.com/tutorials/command-line-basics-and-useful-tricks-with-the-terminal--cms-29356
 
 .. note::
+
   OS X includes a usable terminal/command line program at
   ``/Applications/Utilities/Terminal.app``. It's good enough for most purposes. If
   you'd like to use something more sophisticated, iTerm2_ is a very powerful

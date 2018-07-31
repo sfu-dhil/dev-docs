@@ -114,3 +114,4 @@ polished.
 .. _`GitHub`: https://github.com
 .. _`SFU DHIL account`: https://github.com/sfu-dhil
 .. _`Github Profile`: https://github.com/settings/profile
+.. _`Github Desktop`: https://desktop.github.com
