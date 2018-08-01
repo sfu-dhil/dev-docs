@@ -13,6 +13,7 @@ This guide should help setting up a new development environment.
    sphinx
    mysql
    php
+   node
    apache
    git
    contrib
