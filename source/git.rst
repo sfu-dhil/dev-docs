@@ -100,12 +100,85 @@ recreating very similar code in each project it is grouped together into
 git submodules. That way each project can share the functionality and bug fixes
 quite easily.
 
+We prefer smaller commits that contain a completed feature or fix a bug
+to larger commits that address many different concerns. Smaller commits are
+easier to read and review, and finding the source of a problem is easier if
+the commits are smaller.
+
 Once git and github are configured, the :ref:`section-apps` documentation should
-help you get an app set up.
+help you get an app set up. But to quickly summarize:
 
-.. todo::
+.. note::
 
-  Document git branches, push, pull, and pull request.
+  So far we haven't been working in git branches in the DHIL, but we really
+  should. The documentation below assumes you are working in the default branch.
+
+#. Create a fork of a project in GitHub.
+
+#. Clone your fork to your computer, and work in the fork.
+
+    .. code-block:: console
+
+      $ git clone --recursive git@github.com:USERNAME/PROJECT.git
+      (useless output goes here)
+      $ cd PROJECT
+
+#. Add the upstream repository to your git repository. This will let you keep
+   your fork up to date with the DHIL repository.
+
+    .. code-block:: console
+
+      $ git remote add upstream http://github.com/sfu-dhil/PROJECT.git
+
+#. Do all of the configuration steps to get the project working.
+
+#. Edit the source code. Don't forget to write tests.
+
+#. Check on the status of your files.
+
+    .. code-block:: console
+
+      $ git status
+      On branch master
+      Your branch is up to date with 'origin/master'.
+
+      Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git checkout -- <file>..." to discard changes in working directory)
+
+      modified:   bower.json
+
+      no changes added to commit (use "git add" and/or "git commit -a")
+
+#. Make some commits in the fork.
+
+    .. code-block:: console
+
+      $ git commit -m "Update the bower metadata." bower.json
+      [master 1791385] Update the bower metadata.
+      1 file changed, 2 insertions(+), 2 deletions(-)
+
+#. Push your commits into your github fork.
+
+    .. code-block:: console
+
+      $ git push
+      (lots of useless output omitted)
+      To github.com:ubermichael/ceww.git
+      c1b3cb3..1791385  master -> master
+
+#. Create a pull request. Open your fork of the project in Github and there
+   should be a "Pull Request" button.
+
+   It's a good idea to tag someone in the DHIL in the pull request by requesting
+   a review.
+
+#. Once your pull request is accepted you should update your repository.
+
+    .. code-block:: console
+
+      $ git pull upstream master
+      (more useless output)
 
 Alternatives to the Command Line
 --------------------------------

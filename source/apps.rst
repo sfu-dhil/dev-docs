@@ -100,6 +100,37 @@ else for a different project. [#fc]_
       $ cd docs
       $ make html
 
+#. Hack and slash your way through the code. The source code for symfony apps is
+   very organized. Application configuration is in ``app/config``. Actual
+   runnable source code is in ``src/AppBundle``. Tests for the code lives in
+   ``src/AppBundle/Tests``. There are also some reusable bundles in
+   ``src/Nines`` which should have come from a git submodule.
+
+#. Run some tests. The composer dependencies include PHPUnit for testing. The
+   source code includes all the tests, and should always be runnable.
+
+    .. code-block:: console
+
+    $ ./vendor/bin/phpunit
+    PHPUnit 5.7.27 by Sebastian Bergmann and contributors.
+
+    ...............................................................  63 / 434 ( 14%)
+    ............................................................... 126 / 434 ( 29%)
+    ............................................................... 189 / 434 ( 43%)
+    ............................................................... 252 / 434 ( 58%)
+    ............................................................... 315 / 434 ( 72%)
+    ............................................................... 378 / 434 ( 87%)
+    ........................................................        434 / 434 (100%)
+
+    Time: 1.7 minutes, Memory: 354.75MB
+
+    OK (434 tests, 775 assertions)
+
+   The git repositories contain a default config file called
+   ``phpunit.xml.dist``. If you want to customize the configuration, copy the file
+   to ``phpunit.xml`` and configure as needed. Git will ignore the ``phpunit.xml``
+   file.
+
 .. rubric:: Footnotes
 
 .. [#fc]
