@@ -16,6 +16,7 @@ This guide should help setting up a new development environment.
    node
    apache
    git
+   apps
    contrib
 
    todo

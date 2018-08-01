@@ -95,9 +95,17 @@ useful if you have multiple computers.
 Using Git and Github
 --------------------
 
+Many of the projects use a bunch of similar functionality. Rather than
+recreating very similar code in each project it is grouped together into
+git submodules. That way each project can share the functionality and bug fixes
+quite easily.
+
+Once git and github are configured, the :ref:`section-apps` documentation should
+help you get an app set up.
+
 .. todo::
 
-  Actually finish this section.
+  Document git branches, push, pull, and pull request.
 
 Alternatives to the Command Line
 --------------------------------
