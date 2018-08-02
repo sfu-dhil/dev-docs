@@ -18,7 +18,7 @@ That may take some time.
 
 .. code-block:: console
 
-  $ pip install Sphinx
+  $ pip3 install Sphinx
 
 .. _Sphinx: http://www.sphinx-doc.org/en/master/
 
