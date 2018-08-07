@@ -127,6 +127,13 @@ Line 11 sets the SQL server mode, which is fairly strict. It will prevent most
 common errors but also allow us to use dates with zeros in them like
 ``1852-00-00`` when the month and day are unknown.
 
+Once the file is in place, MySQL will need to be restarted for the configuration
+to become active.
+
+.. code-block:: console
+
+  $ brew services restart mysql@5.7
+
 Make it easier to use
 ---------------------
 
@@ -153,6 +160,9 @@ Line 2 adds the current database name to the command prompt in the MySQL console
 
 Lines 3 and 4 set the connection parameters so you can connect without passing
 the username and password at the command line.
+
+There's no need to restart MySQL after changing this file in your home
+directory.
 
 Use MySQL
 ---------
