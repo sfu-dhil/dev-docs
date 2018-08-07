@@ -47,6 +47,12 @@ Uncomment these lines by removing the '#' character.
 2. ``#LoadModule rewrite_module lib/httpd/modules/mod_rewrite.so``
     Remove the leading ``#``. No other changes are necessary for this line.
 
+.. note::
+
+  If you don't have access to port 80, maybe because the people that control
+  things don't want to give out that kind of access, skip this step. Make sure
+  that you take note of the fact that you skipped the step.
+
 Change where Apache will find documents to serve. Find the DocumentRoot
 section of the configuration file. It will look like this:
 
@@ -143,6 +149,11 @@ Once these changes are complete, you must restart Apache for them to take effect
 
 Now if you visit http://localhost you should see "Howdy do!" in the page.
 
+.. note::
+
+  If you skipped changing the port number to 80 above, you should visit
+  http://localhost:8080 instead.
+
 Add PHP to Apache
 -----------------
 
@@ -159,6 +170,10 @@ Add this text, as it is, to the httpd.conf file.
   <FilesMatch .php$>
     SetHandler application/x-httpd-php
   </FilesMatch>
+
+.. note::
+
+  For php7 you may need line 2 to be ``<FilesMatch \.php$>`` - note the slash.
 
 Line 1 loads the PHP 5.6 module, and lines 2-4 tell Apache to use it for all
 files that have a ``.php`` suffix.
@@ -178,6 +193,11 @@ Finally, test that Apache and PHP work together.
 
 Now you should be able to visit http://localhost/info.php to see some very
 useful information about your PHP installation.
+
+.. note::
+
+  Maybe you like to skip steps and should visit http://localhost:8080/info.php
+  instead.
 
 Troubleshooting
 ---------------

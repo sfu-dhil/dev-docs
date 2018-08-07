@@ -25,7 +25,7 @@ else for a different project. [#fc]_
 
     .. code-block:: sql
 
-      create user ceww;
+      create user ceww@localhost;
       create database ceww;
       grant all on ceww.* to ceww@localhost;
       set password for ceww@localhost = password('hotpockets');
@@ -58,11 +58,11 @@ else for a different project. [#fc]_
    need to give additional permissions to the file upload directory. Check the
    documentation.
 
-#. Install the CKEditor assets. They cannot be distributed as part of a package
-   due to licensing restrictions, even though they are free and open source.
+#. Install the assets.
 
     .. code-block:: console
 
+      $ ./bin/console ckeditor:install
       $ ./bin/console assets:install --symlink
 
 #. Install the bower dependencies. These are javascript and CSS packages like
@@ -80,7 +80,11 @@ else for a different project. [#fc]_
 
 #. At this point, the web interface should be up and running, and you should be
    able to load some pages. The URL for the app should be something like
-   http://localhost/ceww
+   http://localhost/ceww/web/app_dev.php
+
+   .. note::
+
+     If you're a pleb without access to port 80: http://localhost:8080/ceww/web/app_dev.php
 
 #. Create an application user with full admin privileges. This is also done
    with the Symfony console.
