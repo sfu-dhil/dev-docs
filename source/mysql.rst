@@ -79,6 +79,61 @@ configuring the MySQL server. Recommended settings include:
 With these settings, only a user logged in to your computer can access the
 database, and must provide a password you assign to do so.
 
+Configure the Server
+--------------------
+
+MySQL's configuration is complex, and can be defined in a number of different
+places, depending on which part of the server is being configured.
+
+To configure the server, edit ``/usr/local/etc/my.cnf`` in your favourite
+text editor. The file may be empty, and might not even exist. That's OK. The
+recommended configuration is below.
+
+.. code-block:: ini
+  :linenos:
+
+  [mysqld]
+  bind-address = 127.0.0.1
+  socket = /tmp/mysql.sock
+  log_error = /var/log/mysql/error.log
+  log_error_verbosity = 2
+  general_log = 0
+  general_log_file = /var/log/mysql/mysql.log
+  slow_query_log = 0
+  slow_query_log_file = /var/log/mysql/slow.log
+  max_allowed_packet = 16M
+  sql_mode="ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION"
+
+Line 1 marks the configuratin as applying only to the MySQL server, instead of
+the client or other programs.
+
+Line 2 prevents access to the server from outside of your computer.
+
+Line 3 defines where mysql will listen for connections through its socket.
+
+Lines 4 & 5 enable the error log and set the error log location.
+
+Lines 6 & 7 disable the general log, but provide a default location for it
+anyway. The general log has too much information for normal use, but can be
+useful for debugging.
+
+Lines 8 & 9 do the same thing for the slow query log. It's useful for tracking
+down problems when necessary but usually isn't necessary.
+
+Line 10 allows larger commands to be sent to MySQL. This is necessary for some
+of the database dumps which can get quite large.
+
+Line 11 sets the SQL server mode, which is fairly strict. It will prevent most
+common errors but also allow us to use dates with zeros in them like
+``1852-00-00`` when the month and day are unknown.
+
+Once the file is in place, MySQL will need to be restarted for the configuration
+to become active.
+
+.. code-block:: console
+
+  $ brew services restart mysql@5.7
+
 Make it easier to use
 ---------------------
 
@@ -105,6 +160,9 @@ Line 2 adds the current database name to the command prompt in the MySQL console
 
 Lines 3 and 4 set the connection parameters so you can connect without passing
 the username and password at the command line.
+
+There's no need to restart MySQL after changing this file in your home
+directory.
 
 Use MySQL
 ---------
