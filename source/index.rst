@@ -4,6 +4,9 @@ Welcome to DHIL's Developer Documentation
 
 This guide should help setting up a new development environment.
 
+Getting Started
+---------------
+
 .. toctree::
    :maxdepth: 1
 
@@ -17,6 +20,21 @@ This guide should help setting up a new development environment.
    apache
    git
    apps
-   contrib
 
-   todo
+Writing Code
+------------
+
+.. toctree::
+  :maxdepth: 1
+
+  symfony
+  exist
+
+Colophon
+--------
+
+.. toctree::
+  :maxdepth: 1
+
+  contrib
+  todo
