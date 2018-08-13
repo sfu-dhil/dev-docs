@@ -35,6 +35,18 @@ editor and make the following changes.
 
 1. ``Listen 8080``
     Change this to ``Listen 80``.
+
+    .. note::
+
+      If you don't have access to port 80, maybe because the people that control
+      things don't want to give out that kind of access, skip this step. Make sure
+      that you take note of the fact that you skipped the step.
+
+      You should also note this if you work with :ref:`eXistDb <exist-label>`,
+      which also listens on port 8080. If you need to run both Apache and eXist
+      at the same time, make sure you change one of their configurations to
+      listen on a different port.
+
 2. ``User _www``
     Change ``_www`` to your user name. [#f1]_
 3. ``Group _www``
@@ -44,14 +56,13 @@ Uncomment these lines by removing the '#' character.
 
 1. ``#ServerName www.example.com:8080``
     Also change **www.example.com:8080** to ``localhost``
+
+    .. note::
+
+      If you skipped step 1, skip this step as well.
+
 2. ``#LoadModule rewrite_module lib/httpd/modules/mod_rewrite.so``
     Remove the leading ``#``. No other changes are necessary for this line.
-
-.. note::
-
-  If you don't have access to port 80, maybe because the people that control
-  things don't want to give out that kind of access, skip this step. Make sure
-  that you take note of the fact that you skipped the step.
 
 Change where Apache will find documents to serve. Find the DocumentRoot
 section of the configuration file. It will look like this:

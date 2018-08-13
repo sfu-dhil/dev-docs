@@ -1,3 +1,5 @@
+.. _exist-label:
+
 eXistDb & oXygen
 ================
 
@@ -43,6 +45,29 @@ and look for this element.
 
 Change ``enable-java-binding="no"`` to ``enable-java-binding="yes"``, save the
 file, and restart eXistDb if you need to.
+
+.. note::
+
+  eXistDb listens on port 8080 by default. If you have installed
+  :ref:`Apache <section-apache>` following the directions there it may also
+  be listening on port 8080. Only one program can listen on a port at a time, so
+  either stop Apache (``brew services stop apache``) or change Apache or eXistDb
+  to listen on another port.
+
+  To change eXistDb's port, open ``/Applications/eXist-db/tools/jetty/etc/jetty-http.xml``
+  and change the port number on line 38. In the examples below, line breaks and
+  indentation have beeb added to improve readability.
+
+  .. code-block:: xml
+    :emphasize-lines: 4
+
+    <Set name="port">
+      <Property name="jetty.http.port" deprecated="jetty.port">
+        <Default>
+          <SystemProperty name="jetty.port" default="8080"/>
+        </Default>
+      </Property>
+    </Set>
 
 Using eXistDb
 -------------
