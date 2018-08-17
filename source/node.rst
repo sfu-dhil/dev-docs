@@ -5,5 +5,7 @@ Installing Node and Node Tools
 
   actually write this.
 
-brew install node npm
-node install -g bower yarn
+.. code-block:: console
+
+  $ brew install node
+  $ npm install -g bower yarn

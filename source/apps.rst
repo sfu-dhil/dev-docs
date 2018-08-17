@@ -23,12 +23,13 @@ else for a different project. [#fc]_
 
 #. Create a database and database user in mysql. These are sample commands.
 
-    .. code-block:: sql
+    .. code-block:: console
 
-      create user ceww@localhost;
-      create database ceww;
-      grant all on ceww.* to ceww@localhost;
-      set password for ceww@localhost = password('hotpockets');
+      $ mysql
+      mysql> create user ceww@localhost;
+      mysql> create database ceww;
+      mysql> grant all on ceww.* to ceww@localhost;
+      mysql> set password for ceww@localhost = password('hotpockets');
 
    Composer will ask for the database name, database user name, and database
    password in the next step.
@@ -115,20 +116,20 @@ else for a different project. [#fc]_
 
     .. code-block:: console
 
-    $ ./vendor/bin/phpunit
-    PHPUnit 5.7.27 by Sebastian Bergmann and contributors.
+      $ ./vendor/bin/phpunit
+      PHPUnit 5.7.27 by Sebastian Bergmann and contributors.
 
-    ...............................................................  63 / 434 ( 14%)
-    ............................................................... 126 / 434 ( 29%)
-    ............................................................... 189 / 434 ( 43%)
-    ............................................................... 252 / 434 ( 58%)
-    ............................................................... 315 / 434 ( 72%)
-    ............................................................... 378 / 434 ( 87%)
-    ........................................................        434 / 434 (100%)
+      ...............................................................  63 / 434 ( 14%)
+      ............................................................... 126 / 434 ( 29%)
+      ............................................................... 189 / 434 ( 43%)
+      ............................................................... 252 / 434 ( 58%)
+      ............................................................... 315 / 434 ( 72%)
+      ............................................................... 378 / 434 ( 87%)
+      ........................................................        434 / 434 (100%)
 
-    Time: 1.7 minutes, Memory: 354.75MB
+      Time: 1.7 minutes, Memory: 354.75MB
 
-    OK (434 tests, 775 assertions)
+      OK (434 tests, 775 assertions)
 
    The git repositories contain a default config file called
    ``phpunit.xml.dist``. If you want to customize the configuration, copy the file

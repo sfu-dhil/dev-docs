@@ -33,6 +33,13 @@ Configuration
 The apache config file is /usr/local/etc/httpd/httpd.conf. Open it in a text
 editor and make the following changes.
 
+.. note::
+
+  If you don't have access to port 80, maybe because the people that control
+  things don't want to give out that kind of access, skip this step. Make sure
+  that you take note of the fact that you skipped the step. Jump down to
+  "Change where Apache will find documents."
+
 1. ``Listen 8080``
     Change this to ``Listen 80``.
 2. ``User _www``
@@ -46,12 +53,6 @@ Uncomment these lines by removing the '#' character.
     Also change **www.example.com:8080** to ``localhost``
 2. ``#LoadModule rewrite_module lib/httpd/modules/mod_rewrite.so``
     Remove the leading ``#``. No other changes are necessary for this line.
-
-.. note::
-
-  If you don't have access to port 80, maybe because the people that control
-  things don't want to give out that kind of access, skip this step. Make sure
-  that you take note of the fact that you skipped the step.
 
 Change where Apache will find documents to serve. Find the DocumentRoot
 section of the configuration file. It will look like this:
@@ -145,7 +146,10 @@ Once these changes are complete, you must restart Apache for them to take effect
 
 .. code-block:: console
 
-  sudo apachectl restart
+  # If you have access to sudo and port 80
+  $ sudo brew services start httpd
+  # If you lack the god-like powers bestowed by "the others"
+  $ brew services start httpd
 
 Now if you visit http://localhost you should see "Howdy do!" in the page.
 
@@ -166,22 +170,10 @@ Add this text, as it is, to the httpd.conf file.
 .. code-block:: apacheconf
   :linenos:
 
-  LoadModule php5_module /usr/local/opt/php@5.6/lib/httpd/modules/libphp5.so
-  <FilesMatch .php$>
+  LoadModule php7_module /usr/local/opt/php/lib/httpd/modules/libphp7.so
+  <FilesMatch \\.php$>
     SetHandler application/x-httpd-php
   </FilesMatch>
-
-.. note::
-
-  For php7 you may need line 2 to be ``<FilesMatch \.php$>`` - note the slash.
-
-Line 1 loads the PHP 5.6 module, and lines 2-4 tell Apache to use it for all
-files that have a ``.php`` suffix.
-
-.. note::
-
-  You can only have one PHP module active at a time. To use a different version
-  of PHP you must change the ``LoadModule`` line and restart Apache.
 
 Finally, test that Apache and PHP work together.
 

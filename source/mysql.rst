@@ -127,8 +127,17 @@ Line 11 sets the SQL server mode, which is fairly strict. It will prevent most
 common errors but also allow us to use dates with zeros in them like
 ``1852-00-00`` when the month and day are unknown.
 
+This configuration will send log files to ``/var/log/mysql``. That directory
+doesn't exist, so create it and set the permissions on it now.
+
+.. code-block:: console
+
+  $ sudo mkdir /var/log/mysql
+  $ sudo chown USERNAME:staff /var/log/mysql
+
 Once the file is in place, MySQL will need to be restarted for the configuration
 to become active.
+
 
 .. code-block:: console
 

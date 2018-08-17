@@ -47,6 +47,8 @@ file, and restart eXistDb if you need to.
 Using eXistDb
 -------------
 
+Most access to the eXistDb service is through a web interface. If you visit
+
 * accessing the database
 * monitor
 * exide
