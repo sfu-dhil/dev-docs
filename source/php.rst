@@ -7,7 +7,7 @@ makes installing another PHP very easy.
 Installation
 ------------
 
-The DHIL production server runs PHP 5.6, so we will install that. installing
+The DHIL production server runs PHP 7, so we will install that. installing
 other versions of PHP is possible and quite easy. See below for more information.
 
 .. code-block:: console
