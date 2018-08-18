@@ -15,6 +15,39 @@ out of date, so it's best to install Git from Homebrew.
   $ git --version
   git version 2.18.0
 
+Global Configuration
+--------------------
+
+You can define a default global git configuration in your home direction. Each
+project managed by git can override any of the configuration options. Open
+``$HOME/.gitconfig`` and add some lines like this:
+
+.. code-block:: ini
+
+  [user]
+        name = BOB TERWILLIGER
+        email = bob@springfield.com
+
+  [core]
+        excludesfile = ~/.gitignore_global
+        editor=/usr/bin/atom
+
+  [github]
+        user = BOBTER
+
+These settings will add your name and email address to commits, and will ignore
+any file pattern found in $HOME/.gitignore_global. It will also configure a
+default Github username for any interactions with Github.
+
+You can now edit ``$HOME/.gitignore_global`` to make sure git ignores some files.
+
+.. code-block:: ini
+
+  *~
+  *.log
+
+This setup will ignore any file that ends in a tilde (~) and any log file.
+
 Encryption Keys
 ---------------
 
