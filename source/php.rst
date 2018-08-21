@@ -35,6 +35,11 @@ manager to download and configure it. The command will ask for a path to the
 imagemagick library. Press enter to accept the default (autodetect) which
 should find the library.
 
+.. todo::
+
+  Is pecl something that needs to be installed separately or is it included when
+  PHP is installed? I wasn't able to tell. --Erik
+
 Line 5 installs Composer, a different kind of PHP package manager.
 
 Configuring
