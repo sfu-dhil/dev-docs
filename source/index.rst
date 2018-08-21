@@ -18,5 +18,6 @@ This guide should help setting up a new development environment.
    git
    apps
    contrib
+   offboarding
 
    todo
