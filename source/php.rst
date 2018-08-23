@@ -1,3 +1,5 @@
+.. _section-php:
+
 PHP
 ===
 
@@ -16,8 +18,9 @@ other versions of PHP is possible and quite easy. See below for more information
   $ brew install php pkg-config imagemagick composer
   $ pecl install imagick
 
-Line 1 installs PHP and friends. The install command will print
-a lot of information to the terminal which you can mostly ignore.
+Line 1 installs PHP and friends. The install command will print a lot of
+information to the terminal which you can mostly ignore. It will also install
+a PHP package manager called ``pecl`` which we will use in step 2.
 
 Line 2 installs the PHP extension that uses imagemagick. It uses PHP's package
 manager to download and configure it. The command will ask for a path to the

@@ -1,3 +1,5 @@
+.. _section-node:
+
 Installing Node and Node Tools
 ==============================
 

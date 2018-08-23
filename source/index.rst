@@ -20,6 +20,7 @@ Getting Started
    apache
    git
    apps
+   offboarding
 
 Writing Code
 ------------
