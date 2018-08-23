@@ -1,3 +1,5 @@
+.. _section-starting:
+
 Getting Started
 ===============
 
@@ -78,6 +80,15 @@ command to do that.
   $ xcode-select --install
 
 XCode is a big piece of software. Expect it to take a long time to download.
+
+.. todo::
+
+  Why is xcode needed to run all the tools? Is this something that could be explained
+  or linked out to another resource? Is it important or necessary to update xcode based
+  on which version of OSX you are running? If it is important, I found instruction on
+  how to update xcode command line tools here: 
+  https://stackoverflow.com/questions/34617452/how-to-update-xcode-from-command-line.
+  --Erik
 
 .. _iTerm2: https://www.iterm2.com/
 .. _Github: https://github.com/sfu-dhil

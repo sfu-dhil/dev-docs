@@ -1,3 +1,5 @@
+.. _section-sphinx:
+
 Sphinx
 ======
 
@@ -12,7 +14,8 @@ Install
 
   $ brew install python
 
-That may take some time.
+That may take some time. By default Homebrew installs Python v3.x. This is the version you want
+for installing and runing Sphinx.
 
 2. Use python's package manager to install Sphinx
 
