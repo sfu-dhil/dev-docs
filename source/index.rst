@@ -2,7 +2,8 @@
 Welcome to DHIL's Developer Documentation
 =========================================
 
-This guide should help setting up a new development environment.
+This guide should help setting up a new development environment and contributing
+to the projects.
 
 Getting Started
 ---------------
@@ -20,7 +21,6 @@ Getting Started
    apache
    git
    apps
-   offboarding
 
 Writing Code
 ------------
@@ -30,6 +30,14 @@ Writing Code
 
   symfony
   exist
+
+Cleaning Up
+-----------
+
+.. toctree::
+  :maxdepth: 1
+
+  offboarding
 
 Colophon
 --------
