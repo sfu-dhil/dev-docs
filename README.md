@@ -1,2 +1,1 @@
-# dev-docs
-Guide to getting started as a DHIL developer
+# Deprecated: See https://github.com/sfu-dhil/dhil-docs
